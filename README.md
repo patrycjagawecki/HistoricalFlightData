@@ -1,10 +1,14 @@
  # **Historical Flight Data Warehouse**
 Patrycja Gawecki
+
 CIS 4400
+
 March 30, 2025
-Professor Bein-Aime
+
+Professor Bien-Aime
 
 Data: Historical Flight Schedules API by Aviation Edge
+
 Data Source: https://aviation-edge.com/developers/#historicala
 
 ## **Business Requirements**

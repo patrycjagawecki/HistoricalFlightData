@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Historical Flight Data Dimensional Model" database="LogicalDesign" id="LogicalDesign-16ca" >
+	<schema name="Historical Flight Data Dimensional Model" >
+		<table name="dim_airline" prior="airport" >
+			<column name="airline_id" prior="departure_airport_id" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="airline_name" type="VARCHAR" length="100" jt="12" />
+			<column name="airline_iata_code" type="VARCHAR" length="3" jt="12" />
+			<column name="airline_icao_code" type="VARCHAR" length="4" jt="12" />
+			<index name="pk_dim_airport" unique="PRIMARY_KEY" >
+				<column name="airline_id" />
+			</index>
+		</table>
+		<table name="dim_airport" prior="Entity" >
+			<column name="airport_id" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="airport_iata_code" type="VARCHAR" length="3" jt="12" />
+			<column name="airport_icao_code" prior="gate" type="VARCHAR" length="4" jt="12" />
+			<index name="pk_dim_airport_0" unique="PRIMARY_KEY" >
+				<column name="airport_id" />
+			</index>
+		</table>
+		<table name="dim_baggage_claim" prior="dim_baggage" >
+			<column name="baggage_claim_id" prior="baggage_id" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="baggage" type="VARCHAR" length="10" jt="12" />
+			<index name="pk_dim_baggage" unique="PRIMARY_KEY" >
+				<column name="baggage_claim_id" />
+			</index>
+		</table>
+		<table name="dim_date" prior="dim_" >
+			<column name="date_id" type="INT" jt="4" mandatory="y" />
+			<column name="year_number" type="INT" jt="4" />
+			<column name="quarter_number" type="INT" jt="4" />
+			<column name="month_number" type="INT" jt="4" />
+			<column name="day_number" type="INT" jt="4" />
+			<column name="hour_number" type="INT" jt="4" />
+			<column name="minute_number" type="INT" jt="4" />
+			<column name="week_of_month" prior="week_of_month_number" type="INT" jt="4" />
+			<column name="week_of_year" type="INT" jt="4" />
+			<column name="holiday" type="BOOLEAN" jt="-7" />
+			<column name="weekend" type="BOOLEAN" jt="-7" />
+			<column name="month_name" type="VARCHAR" length="25" jt="12" />
+			<column name="day_name" type="VARCHAR" length="25" jt="12" />
+			<index name="pk_dim_date" unique="PRIMARY_KEY" >
+				<column name="date_id" />
+			</index>
+		</table>
+		<table name="dim_flight" prior="flight_" >
+			<column name="flight_dim_id" prior="flight_id" type="INT" jt="4" mandatory="y" />
+			<column name="type" type="VARCHAR" length="9" jt="12" />
+			<column name="status" type="VARCHAR" length="9" jt="12" >
+				<defo><![CDATA['Unknown']]></defo>
+			</column>
+			<column name="flight_number" type="INT" jt="4" />
+			<column name="flight_iata_number" type="VARCHAR" length="3" jt="12" />
+			<column name="flight_icao_number" type="VARCHAR" length="4" jt="12" />
+			<index name="pk_dim_flight" unique="PRIMARY_KEY" >
+				<column name="flight_dim_id" />
+			</index>
+		</table>
+		<table name="dim_gate" prior="Entity" >
+			<column name="gate_id" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="gate_number" prior="gate" type="VARCHAR" length="10" jt="12" />
+			<index name="pk_gate_id" unique="UNIQUE_KEY" >
+				<column name="gate_id" />
+			</index>
+			<index name="pk_gate_id_001" unique="UNIQUE_KEY" >
+				<column name="gate_id" />
+			</index>
+			<index name="pk_gate_id_002" unique="UNIQUE_KEY" >
+				<column name="gate_id" />
+			</index>
+			<index name="pk_dim_gate" unique="PRIMARY_KEY" >
+				<column name="gate_id" />
+			</index>
+		</table>
+		<table name="flight_fact" prior="Flight_Fact" >
+			<column name="flight_id" prior="Flight_ID" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="delay" prior="Delay" type="INT" jt="4" />
+			<column name="estimated_flight_duration" prior="Estimated_Flight_Duration" type="INT" jt="4" />
+			<column name="airline_id" prior="departure_airport_id" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="flight_dim_id" prior="flight_id" type="INT" jt="4" mandatory="y" />
+			<column name="scheduled_departure_time_id" type="INT" jt="4" mandatory="y" />
+			<column name="estimated_departure_time_id" type="INT" jt="4" mandatory="y" />
+			<column name="scheduled_arrival_time_id" type="INT" jt="4" mandatory="y" />
+			<column name="estimated_arrival_time_id" type="INT" jt="4" mandatory="y" />
+			<column name="departure_airport_id" type="INT" jt="4" mandatory="y" />
+			<column name="arrival_airport_id" type="INT" jt="4" mandatory="y" />
+			<column name="departing_gate_id" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="arrival_gate_id" type="BIGINT" jt="-5" />
+			<column name="baggage_claim_id" prior="baggage_id" type="BIGINT" jt="-5" mandatory="y" />
+			<index name="pk_Flight_Fact" unique="PRIMARY_KEY" >
+				<column name="flight_id" />
+			</index>
+			<fk name="fk_flight_fact_dim_airline" to_schema="Historical Flight Data Dimensional Model" to_table="dim_airline" type="NonIdentifying" mandatory="y" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="airline_id" pk="airline_id" />
+			</fk>
+			<fk name="fk_flight_fact_dim_flight" to_schema="Historical Flight Data Dimensional Model" to_table="dim_flight" type="NonIdentifying" mandatory="y" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="flight_dim_id" pk="flight_dim_id" />
+			</fk>
+			<fk name="fk_flight_fact_dim_date" to_schema="Historical Flight Data Dimensional Model" to_table="dim_date" type="NonIdentifying" mandatory="y" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="scheduled_departure_time_id" pk="date_id" />
+			</fk>
+			<fk name="fk_flight_fact_dim_date_0" to_schema="Historical Flight Data Dimensional Model" to_table="dim_date" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="estimated_departure_time_id" pk="date_id" />
+			</fk>
+			<fk name="fk_flight_fact_dim_date_1" to_schema="Historical Flight Data Dimensional Model" to_table="dim_date" type="NonIdentifying" mandatory="y" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="scheduled_arrival_time_id" pk="date_id" />
+			</fk>
+			<fk name="fk_flight_fact_dim_date_2" to_schema="Historical Flight Data Dimensional Model" to_table="dim_date" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="estimated_arrival_time_id" pk="date_id" />
+			</fk>
+			<fk name="fk_flight_fact_dim_airport" to_schema="Historical Flight Data Dimensional Model" to_table="dim_airport" type="NonIdentifying" mandatory="y" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="departure_airport_id" pk="airport_id" />
+			</fk>
+			<fk name="fk_flight_fact_dim_airport_0" to_schema="Historical Flight Data Dimensional Model" to_table="dim_airport" type="NonIdentifying" mandatory="y" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="arrival_airport_id" pk="airport_id" />
+			</fk>
+			<fk name="fk_flight_fact_dim_gate" to_schema="Historical Flight Data Dimensional Model" to_table="dim_gate" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="departing_gate_id" pk="gate_id" />
+			</fk>
+			<fk name="fk_flight_fact_dim_gate_0" to_schema="Historical Flight Data Dimensional Model" to_table="dim_gate" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="arrival_gate_id" pk="gate_id" />
+			</fk>
+			<fk name="fk_flight_fact_dim_baggage_claim" to_schema="Historical Flight Data Dimensional Model" to_table="dim_baggage_claim" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="baggage_claim_id" pk="baggage_claim_id" />
+			</fk>
+		</table>
+	</schema>
+	<layout name="Default Diagram" id="Diagram-516" show_relation="columns" >
+		<entity schema="Historical Flight Data Dimensional Model" name="dim_airline" color="DDC1EE" x="60" y="60" />
+		<entity schema="Historical Flight Data Dimensional Model" name="dim_airport" color="DDC1EE" x="80" y="240" />
+		<entity schema="Historical Flight Data Dimensional Model" name="dim_baggage_claim" color="DDC1EE" x="700" y="260" />
+		<entity schema="Historical Flight Data Dimensional Model" name="dim_date" color="DDC1EE" x="440" y="480" />
+		<entity schema="Historical Flight Data Dimensional Model" name="dim_flight" color="DDC1EE" x="200" y="460" />
+		<entity schema="Historical Flight Data Dimensional Model" name="dim_gate" color="DDC1EE" x="680" y="100" />
+		<entity schema="Historical Flight Data Dimensional Model" name="flight_fact" color="DDC1EE" x="340" y="60" />
+	</layout>
+</project>

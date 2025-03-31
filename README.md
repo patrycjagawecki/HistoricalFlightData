@@ -1,4 +1,4 @@
- # ** Historical Flight Data Warehouse **
+ # **Historical Flight Data Warehouse**
 
 Data Requirements:
 Data: Historical Flight Schedules API by Aviation Edge

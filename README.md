@@ -35,6 +35,7 @@ I will display my extensive research in a variety of ways. Below, I have provide
 
 * The system must support quick and efficient ETL processes so that data can be consistently cleaned, transformed, and stored in a structured format to support advanced analysis and reporting.
 
-
+## **Data Requirements**
+This data is sourced from a REST API and includes airport and airline information. The data retrieved from the API is in JSON format.
 
 

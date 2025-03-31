@@ -15,7 +15,9 @@ Data Source: https://aviation-edge.com/developers/#historicala
 
 ## **Business Requirements**
 I plan to enter the airline market by opening a US-based airline company with global routes. However, I want to stand out from my competitors by researching where delays are more frequent, allowing my company to improve operational efficiency and enhance the customer experience when traveling. Below, I have provided a few business requirements I would like to explore:
-Which arrival and departure destinations have seen the most delays historically? (I will explore this business requirement to identify patterns in delays to increase customer satisfaction.)
+
+
+* Which arrival and departure destinations have seen the most delays historically? (I will explore this business requirement to identify patterns in delays to increase customer satisfaction.)
 What patterns are seen in common routes with flight cancellations? (My company will focus on ensuring that there will be minimized cancellations with commonly cancelled routes, so that my airline is more reliable to customers than my competitors.)
 What are the most common departure times domestically and internationally? (I will research flight schedules to identify peak travel times and demand. If more flights are scheduled at a certain time, it means other airlines have planned those departures to meet high demand.)
 

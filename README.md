@@ -26,7 +26,9 @@ I will display my extensive research in a variety of ways. Below, I have provide
 
 ## **Data Requirements**
 This data is sourced from a REST API and includes airport and airline information. The data retrieved from the API is in JSON format.
+
 Data: Historical Flight Schedules API by Aviation Edge
+
 Data Source: https://aviation-edge.com/developers/#historicala
 
 ## **Information Architecture**

@@ -3,16 +3,6 @@ Patrycja Gawecki
 
 CIS 4400
 
-March 30, 2025
-
-Professor Bien-Aime
-
-## **Data**
-
-Data: Historical Flight Schedules API by Aviation Edge
-
-Data Source: https://aviation-edge.com/developers/#historicala
-
 ## **Business Requirements**
 I plan to enter the airline market by opening a US-based airline company with global routes. However, I want to stand out from my competitors by researching where delays are more frequent, allowing my company to improve operational efficiency and enhance the customer experience when traveling. Below, I have provided a few business requirements I would like to explore:
 
@@ -36,6 +26,8 @@ I will display my extensive research in a variety of ways. Below, I have provide
 
 ## **Data Requirements**
 This data is sourced from a REST API and includes airport and airline information. The data retrieved from the API is in JSON format.
+Data: Historical Flight Schedules API by Aviation Edge
+Data Source: https://aviation-edge.com/developers/#historicala
 
 ## **Information Architecture**
 <img width="968" alt="image" src="https://github.com/user-attachments/assets/0003ffa9-a745-4821-a5a1-e26e1bc39660" />

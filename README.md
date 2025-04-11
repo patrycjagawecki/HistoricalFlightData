@@ -26,7 +26,6 @@ I plan to enter the airline market by opening a US-based airline company with gl
 ## **Functional Requirements**
 I will display my extensive research in a variety of ways. Below, I have provided a list of my functional requirements:
 
-
 * The system must be able to successfully pull accurate and updated data from an API, including details such as airline, departure and arrival, date, times, statuses, and delays.
 
 * The system must be capable of handling large volumes of historical flight data and ensure that there are quick response times for data retrieval.
@@ -37,5 +36,12 @@ I will display my extensive research in a variety of ways. Below, I have provide
 
 ## **Data Requirements**
 This data is sourced from a REST API and includes airport and airline information. The data retrieved from the API is in JSON format.
+
+## **Information Architecture**
+<img width="968" alt="image" src="https://github.com/user-attachments/assets/0003ffa9-a745-4821-a5a1-e26e1bc39660" />
+
+## **Data Architecture**
+<img width="1228" alt="image" src="https://github.com/user-attachments/assets/77c08520-2661-4e92-bf41-0fdff1db3868" />
+
 
 

@@ -37,7 +37,13 @@ Data Source: https://aviation-edge.com/developers/#historicala
 ## **Data Architecture**
 <img width="1228" alt="image" src="https://github.com/user-attachments/assets/77c08520-2661-4e92-bf41-0fdff1db3868" />
 
+## **Technical Architecture**
+* Data Sourcing: Aviation Edge Historical Flight Data API (Extracted from Professor Bien-Aime's Azure Blob Storage)
+* Data Extraction: Python
+* Data Cloud Storage: Microsoft Azure
+* Data Transformation (Cleaning and Reformatting): Python
+* Data Warehouse: Snowflake
+* Data Visualization and Business Intelligence: PowerBI 
+
 ## Dimensional Model
 <img width="722" alt="image" src="https://github.com/user-attachments/assets/24630197-7153-4380-a363-924f565329a6" />
-
-

@@ -37,5 +37,7 @@ Data Source: https://aviation-edge.com/developers/#historicala
 ## **Data Architecture**
 <img width="1228" alt="image" src="https://github.com/user-attachments/assets/77c08520-2661-4e92-bf41-0fdff1db3868" />
 
+## Dimensional Model
+<img width="722" alt="image" src="https://github.com/user-attachments/assets/24630197-7153-4380-a363-924f565329a6" />
 
 

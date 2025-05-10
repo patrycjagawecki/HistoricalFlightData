@@ -10,17 +10,9 @@
 				<column name="airline_id" />
 			</index>
 		</table>
-		<table name="dim_airport" prior="Entity" >
-			<column name="airport_id" type="BIGINT" jt="-5" mandatory="y" />
-			<column name="airport_iata_code" type="VARCHAR" length="3" jt="12" />
-			<column name="airport_icao_code" prior="gate" type="VARCHAR" length="4" jt="12" />
-			<index name="pk_dim_airport_0" unique="PRIMARY_KEY" >
-				<column name="airport_id" />
-			</index>
-		</table>
 		<table name="dim_baggage_claim" prior="dim_baggage" >
 			<column name="baggage_claim_id" prior="baggage_id" type="BIGINT" jt="-5" mandatory="y" />
-			<column name="baggage" type="VARCHAR" length="10" jt="12" />
+			<column name="arrival_baggage_claim" prior="baggage" type="VARCHAR" length="10" jt="12" />
 			<index name="pk_dim_baggage" unique="PRIMARY_KEY" >
 				<column name="baggage_claim_id" />
 			</index>
@@ -39,6 +31,7 @@
 			<column name="weekend" type="BOOLEAN" jt="-7" />
 			<column name="month_name" type="VARCHAR" length="25" jt="12" />
 			<column name="day_name" type="VARCHAR" length="25" jt="12" />
+			<column name="timestamp_is_isoformat" type="DATETIME" length="12" jt="93" />
 			<index name="pk_dim_date" unique="PRIMARY_KEY" >
 				<column name="date_id" />
 			</index>
@@ -51,7 +44,10 @@
 			</column>
 			<column name="flight_number" type="INT" jt="4" />
 			<column name="flight_iata_number" type="VARCHAR" length="3" jt="12" />
-			<column name="flight_icao_number" type="VARCHAR" length="4" jt="12" />
+			<column name="flight_icao_number" prior="codeshare_flight_iata" type="VARCHAR" length="5" jt="12" />
+			<column name="codeshare_flight_number" type="VARCHAR" length="6" jt="12" />
+			<column name="codeshare_flight_icao" type="VARCHAR" length="6" jt="12" />
+			<column name="codeshare_flight_iata" type="VARCHAR" length="6" jt="12" />
 			<index name="pk_dim_flight" unique="PRIMARY_KEY" >
 				<column name="flight_dim_id" />
 			</index>
@@ -59,6 +55,8 @@
 		<table name="dim_gate" prior="Entity" >
 			<column name="gate_id" type="BIGINT" jt="-5" mandatory="y" />
 			<column name="gate_number" prior="gate" type="VARCHAR" length="10" jt="12" />
+			<column name="airport_iata_code" prior="airport" type="VARCHAR" jt="12" />
+			<column name="airport_icao_code" type="VARCHAR" length="4" jt="12" />
 			<index name="pk_gate_id" unique="UNIQUE_KEY" >
 				<column name="gate_id" />
 			</index>
@@ -82,8 +80,6 @@
 			<column name="estimated_departure_time_id" type="INT" jt="4" mandatory="y" />
 			<column name="scheduled_arrival_time_id" type="INT" jt="4" mandatory="y" />
 			<column name="estimated_arrival_time_id" type="INT" jt="4" mandatory="y" />
-			<column name="departure_airport_id" type="INT" jt="4" mandatory="y" />
-			<column name="arrival_airport_id" type="INT" jt="4" mandatory="y" />
 			<column name="departing_gate_id" type="BIGINT" jt="-5" mandatory="y" />
 			<column name="arrival_gate_id" type="BIGINT" jt="-5" />
 			<column name="baggage_claim_id" prior="baggage_id" type="BIGINT" jt="-5" mandatory="y" />
@@ -108,12 +104,6 @@
 			<fk name="fk_flight_fact_dim_date_2" to_schema="Historical Flight Data Dimensional Model" to_table="dim_date" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
 				<fk_column name="estimated_arrival_time_id" pk="date_id" />
 			</fk>
-			<fk name="fk_flight_fact_dim_airport" to_schema="Historical Flight Data Dimensional Model" to_table="dim_airport" type="NonIdentifying" mandatory="y" cardinality="OneMore" range_from="0" range_to="0" >
-				<fk_column name="departure_airport_id" pk="airport_id" />
-			</fk>
-			<fk name="fk_flight_fact_dim_airport_0" to_schema="Historical Flight Data Dimensional Model" to_table="dim_airport" type="NonIdentifying" mandatory="y" cardinality="OneMore" range_from="0" range_to="0" >
-				<fk_column name="arrival_airport_id" pk="airport_id" />
-			</fk>
 			<fk name="fk_flight_fact_dim_gate" to_schema="Historical Flight Data Dimensional Model" to_table="dim_gate" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
 				<fk_column name="departing_gate_id" pk="gate_id" />
 			</fk>
@@ -127,11 +117,10 @@
 	</schema>
 	<layout name="Default Diagram" id="Diagram-516" show_relation="columns" >
 		<entity schema="Historical Flight Data Dimensional Model" name="dim_airline" color="DDC1EE" x="60" y="60" />
-		<entity schema="Historical Flight Data Dimensional Model" name="dim_airport" color="DDC1EE" x="80" y="240" />
 		<entity schema="Historical Flight Data Dimensional Model" name="dim_baggage_claim" color="DDC1EE" x="700" y="260" />
+		<entity schema="Historical Flight Data Dimensional Model" name="flight_fact" color="DDC1EE" x="340" y="60" />
+		<entity schema="Historical Flight Data Dimensional Model" name="dim_gate" color="DDC1EE" x="740" y="100" />
 		<entity schema="Historical Flight Data Dimensional Model" name="dim_date" color="DDC1EE" x="440" y="480" />
 		<entity schema="Historical Flight Data Dimensional Model" name="dim_flight" color="DDC1EE" x="200" y="460" />
-		<entity schema="Historical Flight Data Dimensional Model" name="dim_gate" color="DDC1EE" x="680" y="100" />
-		<entity schema="Historical Flight Data Dimensional Model" name="flight_fact" color="DDC1EE" x="340" y="60" />
 	</layout>
 </project>

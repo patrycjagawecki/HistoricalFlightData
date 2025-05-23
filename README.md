@@ -21,7 +21,7 @@ I want to stand out from my competitors by researching where delays are more fre
 
 * What patterns are seen with flight cancellations? (My company will focus on ensuring that there will be minimized cancellations with commonly cancelled routes, so that my airline is more reliable to customers than my competitors.)
 
-* What are the most common departure times domestically? (I will research flight schedules to identify peak travel times and demand. If more flights are scheduled at a certain time, it means other airlines have planned those departures to meet high demand.)
+* What are the most common departure times flying out of the airports my airline is departing from? (I will research flight schedules to identify peak travel months and demand. If more flights are scheduled at around a certain season, it means other airlines have planned those departures to meet high demand.)
 
 ## **Functional Requirements**
 I will display my extensive research in a variety of ways. Below, I have provided a list of my functional requirements:

@@ -32,10 +32,12 @@ Data: Historical Flight Schedules API by Aviation Edge
 Data Source: https://aviation-edge.com/developers/#historicala
 
 ## **Information Architecture**
-<img width="968" alt="image" src="https://github.com/user-attachments/assets/0003ffa9-a745-4821-a5a1-e26e1bc39660" />
+<img width="1075" alt="CIS 4400 Homework 1 Information Architecture" src="https://github.com/user-attachments/assets/5e19b2bb-a6d5-444a-ae50-38b65d837cf9" />
+
 
 ## **Data Architecture**
-<img width="1228" alt="image" src="https://github.com/user-attachments/assets/77c08520-2661-4e92-bf41-0fdff1db3868" />
+<img width="1074" alt="CIS 4400 Homework 1 Data Architecture" src="https://github.com/user-attachments/assets/21cfb999-065a-4589-9c49-6d69f4d3b2e6" />
+
 
 ## **Technical Architecture**
 * Data Sourcing: Aviation Edge Historical Flight Data API (Extracted from Professor Bien-Aime's Azure Blob Storage)

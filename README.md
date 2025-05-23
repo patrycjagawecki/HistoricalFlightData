@@ -1,8 +1,6 @@
  # **Historical Flight Data Warehouse**
 Patrycja Gawecki
 
-CIS 4400
-
 ## **Business Requirements**
 I plan to enter the airline market by opening a US-based airline company with global routes. My airline will depart from the following US airports:
 
@@ -75,3 +73,17 @@ This data contains:
 ## Dimensional Model
 <img width="894" alt="image" src="https://github.com/user-attachments/assets/a68a20f8-9464-428c-99ec-145c59340bd8" />
 
+**Flight Fact**
+Displays keys used to connect to dimension tables, along with date information and calculated fields such as delay and estimated flight duration.
+
+Size: 8.4m rows
+
+**Flight Dimension**
+Further details on the specific flight. Displays flight details including flight type, status, number, IATA code, and ICAO code.
+
+Size: 93.5k rows
+
+**Gate Dimension**
+Details on the gate the flight will depart from or arrive at. Displays details including gate number, airport IATA, and airport ICAO.
+
+Size: 11.5k rows

@@ -4,7 +4,20 @@ Patrycja Gawecki
 CIS 4400
 
 ## **Business Requirements**
-I plan to enter the airline market by opening a US-based airline company with global routes. However, I want to stand out from my competitors by researching where delays are more frequent, allowing my company to improve operational efficiency and enhance the customer experience when traveling. Below, I have provided a few business requirements I would like to explore:
+I plan to enter the airline market by opening a US-based airline company with global routes. My airline will depart from the following US airports:
+
+* John F. Kennedy International Airport (New York City, New York)
+* Hartsfield-Jackson Atlanta International Airport (Atlanta, Georgia)
+* Charlotte Douglas International Airport (Charlotte, North Carolina)
+* Chicago O'Hare International Airport (Chicago, Illinois)
+* George Bush Intercontinental Airport (Houston, Texas)
+* Dallas-Fort Worth International Airport (Dallas, Texas)
+* Los Angeles International Airport (Los Angeles, California)
+* Seattle–Tacoma International Airport (Seattle, Washington)
+* Miami International Airport (Miami, Florida)
+* Denver International Airport (Denver, Colorado)
+
+I want to stand out from my competitors by researching where delays are more frequent, allowing my company to improve operational efficiency and enhance the customer experience when traveling. Below, I have provided a few business requirements I would like to explore:
 
 
 * Which arrival and departure destinations have seen the most delays historically? (I will explore this business requirement to identify patterns in delays to increase customer satisfaction.)

@@ -69,9 +69,15 @@ This data contains:
 * Data Cloud Storage: Microsoft Azure
 * Data Transformation (Cleaning and Reformatting): Python
 * Data Warehouse: Snowflake
-* Data Visualization and Business Intelligence: PowerBI 
+* Data Visualization and Business Intelligence: PowerBI
 
-## Dimensional Model
+## **Medallion Architecture**
+
+* Bronze (Azure Data): Raw JSON files containing historical flight data, extracted directly from Azure Blob Storage without any transformations or cleaning. Records for each day are stored in different JSON files.
+* Silver (Python Data): The data was cleaned in Python (ELT.ipynb) where unnecessary columns and rows were dropped, columns were renamed, and the different JSON records consolidated into one dataframe.
+* Gold (PowerBI Data): The data was reorganized into a star schema, which was connected in PowerBI, and now we can create metrics and visuals for our analytics.
+
+## **Dimensional Model**
 <img width="894" alt="image" src="https://github.com/user-attachments/assets/a68a20f8-9464-428c-99ec-145c59340bd8" />
 
 **Flight Fact**
@@ -88,3 +94,5 @@ Size: 93.5k rows
 Details on the gate the flight will depart from or arrive at. Displays details including gate number, airport IATA, and airport ICAO.
 
 Size: 11.5k rows
+
+## **PowerBI Report**

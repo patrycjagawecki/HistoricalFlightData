@@ -43,6 +43,19 @@ Data: Historical Flight Schedules API by Aviation Edge
 
 Data Source: https://aviation-edge.com/developers/#historicala
 
+This data contains:
+
+* Flight Type
+* Flight Status
+* IATA Codes (Flights, Airlines, Airports)
+* ICAO Codes (Flights, Airlines, Airports)
+* Scheduled Departure and Arrival Times
+* Estimated Departure and Arrival Times
+* Flight Numbers
+* Airline Names
+* Codeshare Airlines and Flight Numbers
+
+
 ## **Information Architecture**
 <img width="1075" alt="CIS 4400 Homework 1 Information Architecture" src="https://github.com/user-attachments/assets/5e19b2bb-a6d5-444a-ae50-38b65d837cf9" />
 

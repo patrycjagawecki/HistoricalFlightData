@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Historical Flight Data Dimensional Model" database="LogicalDesign" id="LogicalDesign-16ca" >
+	<schema name="Historical Flight Data Dimensional Model" >
+		<table name="dim_flight" prior="flight_" >
+			<column name="flight_dim_id" prior="flight_id" type="INT" jt="4" mandatory="y" />
+			<column name="type" type="VARCHAR" length="9" jt="12" />
+			<column name="status" type="VARCHAR" length="9" jt="12" >
+				<defo><![CDATA['Unknown']]></defo>
+			</column>
+			<column name="flight_number" type="INT" jt="4" />
+			<column name="flight_iata_number" type="VARCHAR" length="3" jt="12" />
+			<column name="flight_icao_number" prior="codeshare_flight_iata" type="VARCHAR" length="5" jt="12" />
+			<index name="pk_dim_flight" unique="PRIMARY_KEY" >
+				<column name="flight_dim_id" />
+			</index>
+		</table>
+		<table name="dim_gate" prior="Entity" >
+			<column name="gate_id" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="gate_number" prior="gate" type="VARCHAR" length="10" jt="12" />
+			<column name="airport_iata_code" prior="airport" type="VARCHAR" jt="12" />
+			<column name="airport_icao_code" type="VARCHAR" length="4" jt="12" />
+			<index name="pk_gate_id" unique="UNIQUE_KEY" >
+				<column name="gate_id" />
+			</index>
+			<index name="pk_gate_id_001" unique="UNIQUE_KEY" >
+				<column name="gate_id" />
+			</index>
+			<index name="pk_gate_id_002" unique="UNIQUE_KEY" >
+				<column name="gate_id" />
+			</index>
+			<index name="pk_dim_gate" unique="PRIMARY_KEY" >
+				<column name="gate_id" />
+			</index>
+		</table>
+		<table name="flight_fact" prior="Flight_Fact" >
+			<column name="flight_id" prior="Flight_ID" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="delay" prior="Delay" type="INT" jt="4" />
+			<column name="estimated_flight_duration" prior="Estimated_Flight_Duration" type="INT" jt="4" />
+			<column name="flight_dim_id" prior="flight_id" type="INT" jt="4" mandatory="y" />
+			<column name="scheduled_departure_time_id" type="DATETIME" jt="93" mandatory="y" />
+			<column name="estimated_departure_time_id" type="DATETIME" jt="93" mandatory="y" />
+			<column name="scheduled_arrival_time_id" type="DATETIME" jt="93" mandatory="y" />
+			<column name="estimated_arrival_time_id" type="DATETIME" jt="93" mandatory="y" />
+			<column name="departing_gate_id" type="BIGINT" jt="-5" mandatory="y" />
+			<column name="arrival_gate_id" type="BIGINT" jt="-5" />
+			<index name="pk_Flight_Fact" unique="PRIMARY_KEY" >
+				<column name="flight_id" />
+			</index>
+			<fk name="fk_flight_fact_dim_flight" to_schema="Historical Flight Data Dimensional Model" to_table="dim_flight" type="NonIdentifying" mandatory="y" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="flight_dim_id" pk="flight_dim_id" />
+			</fk>
+			<fk name="fk_flight_fact_dim_gate" to_schema="Historical Flight Data Dimensional Model" to_table="dim_gate" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="departing_gate_id" pk="gate_id" />
+			</fk>
+			<fk name="fk_flight_fact_dim_gate_0" to_schema="Historical Flight Data Dimensional Model" to_table="dim_gate" type="NonIdentifying" mandatory="n" cardinality="OneMore" range_from="0" range_to="0" >
+				<fk_column name="arrival_gate_id" pk="gate_id" />
+			</fk>
+		</table>
+	</schema>
+	<layout name="Default Diagram" id="Diagram-516" show_relation="columns" >
+		<entity schema="Historical Flight Data Dimensional Model" name="dim_gate" color="DDC1EE" x="720" y="100" />
+		<entity schema="Historical Flight Data Dimensional Model" name="dim_flight" color="DDC1EE" x="60" y="160" />
+		<entity schema="Historical Flight Data Dimensional Model" name="flight_fact" color="DDC1EE" x="320" y="60" />
+	</layout>
+</project>

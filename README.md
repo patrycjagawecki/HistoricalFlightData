@@ -48,4 +48,5 @@ Data Source: https://aviation-edge.com/developers/#historicala
 * Data Visualization and Business Intelligence: PowerBI 
 
 ## Dimensional Model
-<img width="722" alt="image" src="https://github.com/user-attachments/assets/24630197-7153-4380-a363-924f565329a6" />
+<img width="894" alt="image" src="https://github.com/user-attachments/assets/a68a20f8-9464-428c-99ec-145c59340bd8" />
+

@@ -65,7 +65,7 @@ This data contains:
 
 
 ## **Technical Architecture**
-* Data Sourcing: Aviation Edge Historical Flight Data API (Extracted from Professor Bien-Aime's Azure Blob Storage)
+* Data Sourcing: Aviation Edge Historical Flight Data API (Extracted from [Professor Bien-Aime's](https://github.com/ancgate) Azure Blob Storage)
 * Data Extraction: Python
 * Data Cloud Storage: Microsoft Azure
 * Data Transformation (Cleaning and Reformatting): Python

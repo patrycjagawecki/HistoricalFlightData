@@ -64,6 +64,9 @@ This data contains:
 
 
 ## **Technical Architecture**
+
+![Historical Flight Data Architecture drawio](https://github.com/user-attachments/assets/d22c30a1-994d-40a8-9d6f-79785c6412fa)
+
 * Data Sourcing: Aviation Edge Historical Flight Data API (Extracted from [Professor Bien-Aime's](https://github.com/ancgate) Azure Blob Storage)
 * Data Extraction: Python
 * Data Cloud Storage: Microsoft Azure

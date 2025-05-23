@@ -17,7 +17,7 @@ I plan to enter the airline market by opening a US-based airline company with gl
 
 I want to stand out from my competitors by researching where delays are more frequent, allowing my company to improve operational efficiency and enhance the customer experience when traveling. Below, I have provided a few business requirements I would like to explore:
 
-* Which arrival and departure destinations have seen the most delays in 2024? (I will explore this business requirement to identify patterns in delays to increase customer satisfaction.)
+* Which arrival and departure destinations have seen the highest amounts of delays in 2024? (I will explore this business requirement to identify patterns in delays to increase customer satisfaction.)
 
 * What patterns are seen with flight cancellations? (My company will focus on ensuring that there will be minimized cancellations with commonly cancelled routes, so that my airline is more reliable to customers than my competitors.)
 

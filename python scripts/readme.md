@@ -14,8 +14,11 @@ An example config.json file for data extraction is shown below:
 {
 
   "ORIGIN_AZURE_CONNECTION_STRING" : "DefaultEndpointsProtocol=https;AccountName=***ORIGINACCOUNTNAME***;AccountKey=***ORIGINACCOUNTKEY***==;EndpointSuffix=***ORIGINENDPOINTSUFFIX***",
+  
   "ORIGIN_CONTAINER_NAME": "***ORIGINCONTAINER***",
+  
   "DESTINATION_AZURE_CONNECTION_STRING" : "DefaultEndpointsProtocol=https;AccountName=***DESTINATIONACCOUNTNAME***;AccountKey=***DESTINATIONACCOUNTKEY***==;EndpointSuffix=***DESTINATIONENDPOINTSUFFIX***",
+  
   "DESTINATION_CONTAINER_NAME": "***DESTINATIONCONTAINER***"
 
 }
@@ -40,3 +43,18 @@ Cleaning and Formatting Done for the Transformation Process:
 
 *(Please note: this is an annonymized version for demonstration purposes only; make sure to replace all values with your own Snowflake credentials)*
 
+{
+
+  "SNOWFLAKE_ACCOUNT": "***SNOWFLAKEACCOUNT***",
+  
+  "SNOWFLAKE_USER": "***SNOWFLAKEUSER***",
+  
+  "SNOWFLAKE_PASSWORD": "***SNOWFLAKEPASSWORD***",
+  
+  "SNOWFLAKE_DATABASE": "***SNOWFLAKEDATABASE***",
+  
+  "SNOWFLAKE_WAREHOUSE": "***SNOWFLAKEWAREHOUSE***",
+  
+  "SNOWFLAKE_SCHEMA": "***SNOWFLAKESCHEMA***"
+  
+}

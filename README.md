@@ -99,3 +99,26 @@ Details on the gate the flight will depart from or arrive at. Displays details i
 Size: 11.5k rows
 
 ## **PowerBI Report**
+
+### **Page 1: Summary**
+
+![image](https://github.com/user-attachments/assets/806876e4-a1f7-41e2-b8cf-9e552fa4d382)
+
+**Function**: This page provides a high-level overview of key performance indicators using Power BI card visuals and calculated measures. It addresses core business questions, including:
+
+* On-Time Flight Ratio: Calculated as # of Non-Delayed Flights / Total Flights, helping identify airports and routes with the lowest on-time performance.
+
+* Average Delay: Highlights destination and arrival airports/routes with the highest average delays.
+
+* Cancellation Rate: Measured as # of Cancelled Flights / Total Flights, identifying areas with the highest cancellation percentages.
+
+* Flight Volume by Month: Displays the scheduled departure months with the highest and lowest flight volumes.
+
+**Insights**: Below are the key takeaways from the summary page, which can be used to support business decision-making and address the primary business questions:
+
+* DFW (Dallas-Fort Worth International Airport, Dallas, TX) has the highest delay rate among departure airports, while AAF (Apalachicola Regional Airport, Apalachicola, Florida) leads among destination airports; the ATL (Hartsfield-Jackson Atlanta International Airport, Atlanta, Georgia) to AAF (Apalachicola Regional Airport, Apalachicola, Florida) route shows the most delays overall—prompting further investigation into whether these are caused by external factors (such as weather, air traffic congestion, etc) or internal operational issues that can be addressed.
+* Doing further analysis into delay, IAH (George Bush Intercontinental Airport, Houston, TX) has the highest average of delays when departing, while POU (Hudson Valley Regional Airport, Dutchess County, New York) has the highest average of delays as an arrival airport. When examining routes, LAX (Los Angeles International Airport, Los Angeles, California) to SLP (San Luis Potosí International Airport, San Luis Potosí, Mexico) has the highest average delays. These are further airports and routes we need to consider when our company is looking into fixing the issue of flight delays.
+* The highest percentage of cancellations comes from DFW (Dallas-Fort Worth International Airport, Dallas, TX) as a departing airport, while ANB (Anniston Regional Airport, Calhoun County, Alabama) has the highest percentage of cancellations as an arrival airport. When looking at routes, ATL (Hartsfield-Jackson Atlanta International Airport, Atlanta, Georgia) to COD (Yellowstone Regional Airport, Cody, Wyoming) has the highest rates of cancellations. This suggests a need to look more closely at operations and conditions affecting these specific airports and routes, as to why they are being cancelled.
+* The highest amount of active flights takes place in May, while the lowest occurs in January. This helps identify high and low peak seasons, reflecting fluctuations in travel demand.
+
+Through this, we notice a pattern in DFW (Dallas-Fort Worth International Airport, Dallas, TX) and ATL (Hartsfield-Jackson Atlanta International Airport, Atlanta, Georgia) as recurring airports in both delay and cancellation analytics. This consistency indicates that we need to take a closer look into the operations of these airports and flights they depart, to understand the root causes and potential areas for improvement.

@@ -154,3 +154,11 @@ Through this, we notice a pattern in DFW (Dallas-Fort Worth International Airpor
 ### **Page 3: Common Scheduled Departure Times**
 
 ![image](https://github.com/user-attachments/assets/2f0100f5-91a5-4fda-b8f6-5274fa8cdf23)
+
+**Function**: This page provides a detailed overview of flight scheduling using a line plot displaying counts of active flights by scheduled departure months and a table displaying our departing airports, their peak month based on their maximum active flight count. If the user would like to look further into specific departure and arrival airports, routes, and estimated departure and arrival dates, they can do so using the slicers in the heading.
+
+**Insights**: Below are the key takeaways from the scheduled departures page, which can be used to support business decision-making and address the primary business questions:
+
+* There are approximately 593,000 active flights in May, indicating a peak travel season with higher demand for flights. Additionally, May appears as the most common peak month for several major airports, including CLT, DEN, ORD, and DFW (noting that the sample includes only 4 flights from DFW). This suggests that scheduling efforts should prioritize May as a key month for increasing flight availability at departure airports. Moreover, the supporting table can be used to optimize flight scheduling by identifying and aligning with the busiest months for each individual departure airport.
+
+## **Conclusion**

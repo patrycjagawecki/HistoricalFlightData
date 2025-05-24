@@ -131,7 +131,7 @@ Through this, we notice a pattern in DFW (Dallas-Fort Worth International Airpor
 
 **Insights**: Below are the key takeaways from the delays page, which can be used to support business decision-making and address the primary business questions:
 
-* There is a 75.04% rate of delayed flights out of all recorded flights. This high percentage is visually emphasized with a red gauge indicator, signaling a significant issue that needs to be investigated by my company.
+* There is a 75.04% rate of delayed flights out of all recorded flights. This high percentage is visually emphasized with a red gauge indicator (conditional formatting), signaling a significant issue that needs to be investigated by my company.
 * There are 23.92 average delay minutes when looking at the overall average delay minutes. While this doesn't seem too high, our company is striving to lower that number as delays impact operations and customer satisfaction negatively.
 * LAX (Los Angeles International Airport, Los Angeles, California) to ORD (Chicago O'Hare International Airport, Chicago, Illinois) has the largest sum of delays. Out of 66k flights, only 9k flights are on time, which indicates a significant number of delays and suggests this may not be a coincidence. This is a common route, with 66k total flights in the database; further investigation is needed to identify and address potential scheduling or operational issues.
 * The largest average delays were recorded in July 2024, with an average delay of 33 minutes. This peak may be attributed to seasonal travel demand, as it follows closely after May, our busiest travel month, or other underlying factors. Further analysis is needed in the next stage of research to identify the root causes and explore potential solutions our airline will implement.
@@ -141,3 +141,16 @@ Through this, we notice a pattern in DFW (Dallas-Fort Worth International Airpor
 
 ![image](https://github.com/user-attachments/assets/c81644be-b323-441e-96f2-f77cc6f77e32)
 
+**Function**: This page provides a detailed overview of cancellations using different visualizations. If the user would like to look further into specific departure and arrival airports, routes, and estimated departure and arrival dates, they can do so using the slicers in the heading.
+
+**Insights**: Below are the key takeaways from the cancellations page, which can be used to support business decision-making and address the primary business questions:
+
+* There is a 22.41% rate of cancelled flights out of all recorded flights. This percentage is visually represented with a green gauge indicator (using conditional formatting), suggesting that while cancellations are not significantly high, they still represent a meaningful portion of total flights and something our company should further investigate.
+* ATL (Hartsfield-Jackson Atlanta International Airport, Atlanta, Georgia) has the largest number of cancelled flights as a departing airport, with around 440,000 flights cancelled. Given ATL's role as a major airport and one of the few airports our airline departs, this high volume of cancellations could have an impact on flight reliability, making it a priority for further review.
+* ATL (Hartsfield-Jackson Atlanta International Airport, Atlanta, Georgia) to MCO (Orlando International Airport, Orlando, Florida) has the largest number of cancellations, operating 94k flights, of which 22k are cancelled. ATL has already been identified in this analysis as the airport with the highest number of cancellations, and this further reinforces the need to investigate its departure operations and recurring issues on heavily traveled routes like ATL to MCO.
+* The highest number of cancellations occurs between May and August, aligning with our earlier analysis identifying May as a peak travel month. This correlation suggests that increased flight volume during peak season may contribute to a higher rate of cancellations.
+* The scatterplot shows that cancellations are more common on shorter flights, with a noticeable peak of over 10,000 cancelled flights on routes with an estimated duration of around one hour. This suggests that shorter routes may be more vulnerable to disruptions or deprioritization during scheduling adjustments, which our company is aware of and an area it will work on.
+
+### **Page 3: Common Scheduled Departure Times**
+
+![image](https://github.com/user-attachments/assets/2f0100f5-91a5-4fda-b8f6-5274fa8cdf23)

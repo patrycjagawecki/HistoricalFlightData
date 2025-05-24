@@ -104,7 +104,7 @@ Size: 11.5k rows
 
 ![image](https://github.com/user-attachments/assets/806876e4-a1f7-41e2-b8cf-9e552fa4d382)
 
-**Function**: This page provides a high-level overview of key performance indicators using Power BI card visuals and calculated measures. It addresses core business questions, including:
+**Function**: This page provides a high-level overview of KPIs using Power BI card visuals and calculated measures. It addresses core business questions, using:
 
 * On-Time Flight Ratio: Calculated as # of Non-Delayed Flights / Total Flights, helping identify airports and routes with the lowest on-time performance.
 
@@ -121,4 +121,23 @@ Size: 11.5k rows
 * The highest percentage of cancellations comes from DFW (Dallas-Fort Worth International Airport, Dallas, TX) as a departing airport, while ANB (Anniston Regional Airport, Calhoun County, Alabama) has the highest percentage of cancellations as an arrival airport. When looking at routes, ATL (Hartsfield-Jackson Atlanta International Airport, Atlanta, Georgia) to COD (Yellowstone Regional Airport, Cody, Wyoming) has the highest rates of cancellations. This suggests a need to look more closely at operations and conditions affecting these specific airports and routes, as to why they are being cancelled.
 * The highest amount of active flights takes place in May, while the lowest occurs in January. This helps identify high and low peak seasons, reflecting fluctuations in travel demand.
 
-Through this, we notice a pattern in DFW (Dallas-Fort Worth International Airport, Dallas, TX) and ATL (Hartsfield-Jackson Atlanta International Airport, Atlanta, Georgia) as recurring airports in both delay and cancellation analytics. This consistency indicates that we need to take a closer look into the operations of these airports and flights they depart, to understand the root causes and potential areas for improvement.
+Through this, we notice a pattern in DFW (Dallas-Fort Worth International Airport, Dallas, TX) and ATL (Hartsfield-Jackson Atlanta International Airport, Atlanta, Georgia) as recurring airports in both delay and cancellation analytics. This consistency indicates that we need to take a closer look at the operations of these airports and the flights they depart, to understand the root causes and potential areas for improvement.
+
+### **Page 2: Delays**
+
+![image](https://github.com/user-attachments/assets/44a792ff-688e-4870-977f-63abe74ec607)
+
+**Function**: This page provides a detailed overview of delays using different visualizations. If the user would like to look further into specific departure and arrival airports, routes, and estimated departure and arrival dates, they can do so using the slicers in the heading.
+
+**Insights**: Below are the key takeaways from the delays page, which can be used to support business decision-making and address the primary business questions:
+
+* There is a 75.04% rate of delayed flights out of all recorded flights. This high percentage is visually emphasized with a red gauge indicator, signaling a significant issue that needs to be investigated by my company.
+* There are 23.92 average delay minutes when looking at the overall average delay minutes. While this doesn't seem too high, our company is striving to lower that number as delays impact operations and customer satisfaction negatively.
+* LAX (Los Angeles International Airport, Los Angeles, California) to ORD (Chicago O'Hare International Airport, Chicago, Illinois) has the largest sum of delays. Out of 66k flights, only 9k flights are on time, which indicates a significant number of delays and suggests this may not be a coincidence. This is a common route, with 66k total flights in the database; further investigation is needed to identify and address potential scheduling or operational issues.
+* The largest average delays were recorded in July 2024, with an average delay of 33 minutes. This peak may be attributed to seasonal travel demand, as it follows closely after May, our busiest travel month, or other underlying factors. Further analysis is needed in the next stage of research to identify the root causes and explore potential solutions our airline will implement.
+* Although the scatterplot of delays by estimated flight duration appears largely clustered across different durations, there is a noticeable decrease in the density of scatter points as flight duration increases. This suggests that shorter flights tend to experience more frequent delays compared to longer ones, and the reason should be investigated in further analytics.
+
+### **Page 3: Cancellations**
+
+![image](https://github.com/user-attachments/assets/c81644be-b323-441e-96f2-f77cc6f77e32)
+

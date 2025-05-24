@@ -162,3 +162,9 @@ Through this, we notice a pattern in DFW (Dallas-Fort Worth International Airpor
 * There are approximately 593,000 active flights in May, indicating a peak travel season with higher demand for flights. Additionally, May appears as the most common peak month for several major airports, including CLT, DEN, ORD, and DFW (noting that the sample includes only 4 flights from DFW). This suggests that scheduling efforts should prioritize May as a key month for increasing flight availability at departure airports. Moreover, the supporting table can be used to optimize flight scheduling by identifying and aligning with the busiest months for each individual departure airport.
 
 ## **Conclusion**
+
+Now that we have built a data warehouse to analyze data from our departure airports, we can draw several key conclusions and outline the next steps for our upcoming research phase. Below are our key takeaways and proposed next steps:
+
+* We have identified a pattern where shorter flights experience more disruptions, including higher rates of delays and cancellations. One possible reason for this trend is under-prioritization. However, our company is committed to ensuring that all flights, regardless of duration, are given equal priority. By doing so, we aim to reduce disruptions and enhance overall customer satisfaction.
+* ATL (Hartsfield-Jackson Atlanta International Airport, Atlanta, Georgia) consistently shows higher levels of disruptions, with routes departing from ATL frequently experiencing the most cancellations and delays. This highlights the need for further investigation into operational challenges specific to ATL and potential strategies to improve reliability at this significant airport.
+* There is a 75.04% delay rate among the airports our airline will depart. This indicates a critical need to do more research into scheduling and operational improvements to minimize delays and enhance the passenger experience.
